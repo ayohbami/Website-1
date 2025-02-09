@@ -4,11 +4,11 @@ services:
   flask-portfolio:
     image: flaskportfolio:latest
     ports:
-      - "6001:6001"
+      - "8080:80"
+    command: ["pipenv", "run", "flask", "--debug", "--app", "api/index.py", "run", "--host=0.0.0.0", "--port=80", "--reload"]
     volumes:
       - .:/flask-portfolio
 
       
     # environment:
     #   - FLASK_ENV=development
-    # command: ["pipenv", "run", "flask", "--debug", "--app", "api/index.py", "run", "--host=0.0.0.0", "--port=6001"]

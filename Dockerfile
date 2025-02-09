@@ -17,7 +17,7 @@ RUN pipenv install --ignore-pipfile
 COPY . .
 
 # # Expose the port your app runs on, this doesnt do anything, its just for documentation purposes.
-EXPOSE 6001
+EXPOSE 80
 
 # Start the application using pipenv to ensure the correct Python environment
 # Run Flask in debug mode with specified app entry point
